@@ -1,0 +1,8 @@
+victorialogs:
+    image: docker.io/victoriametrics/victoria-logs:v0.4.2-victorialogs
+    volumes:
+      - victorialogs-fluentbit-vl:/vlogs
+    ports:
+      - "9428:9428"
+    command:
+      - -storageDataPath=/vlog
